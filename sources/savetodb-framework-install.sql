@@ -1,8 +1,8 @@
 -- =============================================
 -- SaveToDB Framework for NuoDB
--- Version 10.8, January 9, 2023
+-- Version 10.13, April 29, 2024
 --
--- Copyright 2014-2023 Gartle LLC
+-- Copyright 2014-2024 Gartle LLC
 --
 -- License: MIT
 -- =============================================
@@ -199,9 +199,9 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE XLS.WORKBOOKS     TO ROLE XLS.XLS_
 
 GRANT SELECT ON XLS.USERS TO ROLE XLS.XLS_DEVELOPERS;
 
-INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'SAVETODB_FRAMEWORK', 'VERSION', 'Information', NULL, NULL, 'ATTRIBUTE', '10.8');
+INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'SAVETODB_FRAMEWORK', 'VERSION', 'Information', NULL, NULL, 'ATTRIBUTE', '10.13');
 INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'OBJECTS',  'TABLE_TYPE',     'ValidationList', NULL, NULL, 'VALUES', 'TABLE, VIEW, PROCEDURE, CODE, HTTP, TEXT, HIDDEN');
-INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'HANDLERS', 'EVENT_NAME',     'ValidationList', NULL, NULL, 'VALUES', 'Actions, AddHyperlinks, AddStateColumn, Authentication, BitColumn, Change, ContextMenu, ConvertFormulas, DataTypeBit, DataTypeBoolean, DataTypeDate, DataTypeDateTime, DataTypeDateTimeOffset, DataTypeDouble, DataTypeInt, DataTypeGuid, DataTypeString, DataTypeTime, DataTypeTimeSpan, DefaultListObject, DefaultValue, DependsOn, DoNotAddChangeHandler, DoNotAddDependsOn, DoNotAddManyToMany, DoNotAddValidation, DoNotChange, DoNotConvertFormulas, DoNotKeepComments, DoNotKeepFormulas, DoNotSave, DoNotSelect, DoNotSort, DoNotTranslate, DoubleClick, DynamicColumns, Format, Formula, FormulaValue, Information, JsonForm, KeepFormulas, KeepComments, License, LoadFormat, ManyToMany, ParameterValues, ProtectRows, RegEx, SaveFormat, SaveWithoutTransaction, SelectionChange, SelectionList, SelectPeriod, SyncParameter, UpdateChangedCellsOnly, UpdateEntireRow, ValidationList');
+INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'HANDLERS', 'EVENT_NAME',     'ValidationList', NULL, NULL, 'VALUES', 'Actions, AddHyperlinks, AddStateColumn, Authentication, BitColumn, Change, ContextMenu, ConvertFormulas, DataTypeBinary, DataTypeBinary16, DataTypeBit, DataTypeBoolean, DataTypeDate, DataTypeDateTime, DataTypeDateTimeOffset, DataTypeDouble, DataTypeInt, DataTypeGuid, DataTypeString, DataTypeTime, DataTypeTimeSpan, DefaultListObject, DefaultValue, DependsOn, DoNotAddChangeHandler, DoNotAddDependsOn, DoNotAddManyToMany, DoNotAddValidation, DoNotChange, DoNotConvertFormulas, DoNotKeepComments, DoNotKeepFormulas, DoNotSave, DoNotSelect, DoNotSort, DoNotTranslate, DoubleClick, DynamicColumns, Format, Formula, FormulaValue, HideByDefault, Information, JsonForm, KeepFormulas, KeepComments, License, LoadFormat, ManyToMany, ParameterValues, ProtectRows, RegEx, SaveFormat, SaveWithoutTransaction, SelectionChange, SelectionList, SelectPeriod, SyncParameter, UpdateChangedCellsOnly, UpdateEntireRow, ValidationList, WhereByDefault');
 INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'HANDLERS', 'HANDLER_TYPE',   'ValidationList', NULL, NULL, 'VALUES', 'TABLE, VIEW, PROCEDURE, FUNCTION, CODE, HTTP, TEXT, MACRO, CMD, VALUES, RANGE, REFRESH, MENUSEPARATOR, PDF, REPORT, SHOWSHEETS, HIDESHEETS, SELECTSHEET, ATTRIBUTE');
 INSERT INTO XLS.HANDLERS (TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, EVENT_NAME, HANDLER_SCHEMA, HANDLER_NAME, HANDLER_TYPE, HANDLER_CODE) VALUES ('XLS', 'HANDLERS', 'HANDLER_CODE',   'DoNotConvertFormulas', NULL, NULL, 'ATTRIBUTE', NULL);
 
